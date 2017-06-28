@@ -37,8 +37,11 @@
 <div class="second-menu">
   <%= link_to 'Меню', categories_path %> |
   <%= link_to 'Регистрация',  new_user_registration_path %> |
-  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %> |
-  <%= link_to 'Войти', new_user_session_path %>
+  <% if(current_user.present?) %>
+    <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Войти', new_user_session_path %>
+  <% end %>
 
 </div>
 <hr>

@@ -1,5 +1,6 @@
 class SubCategoriesController < ApplicationController
   before_action :set_sub, only: [:show, :edit, :update, :destroy]
+  before_action :check_admin, only: [:new, :edit, :update, :destroy]
   def index
     @sub_categories = SubCategory.all
   end
