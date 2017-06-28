@@ -1,0 +1,18 @@
+
+<h1><%= @sub_category.title %>
+  <% if current_user.try(:admin?) %>
+  <span style="font-size: 14px;">
+  <%= link_to 'Изменить', edit_sub_category_path(@sub_category) %>
+  <%= link_to 'Удалить под категорию', sub_category_path(@sub_category), method: :delete, data: {confirm: 'Are you sure?'} %>
+</span>
+</h1>
+
+<%= link_to "Создать продукт", new_product_path(id: @sub_category.id) %>
+<% end %>
+<div class="container-products">
+  <% @products.each do  |products|%>
+  <div class="col">
+        <%= link_to products.title, products %>
+  </div>
+<% end %>
+</div>
