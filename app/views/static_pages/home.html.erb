@@ -1,1 +1,8 @@
-<h1>Home</h1>
+<div class="categories-container">
+  <% @categories.each do |c| %>
+    <%= link_to c.title, c %>  |
+  <% end %>
+  <hr>
+</div>
+
+<h1>Новинки</h1>
