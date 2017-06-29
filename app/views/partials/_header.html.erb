@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-custom">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,4 +44,12 @@
   </div>
 
 </nav>
+<hr>
+<div class="categories-container" style="color:#ff6c36">
+  <h4 align="center">
+  <% @categories.each do |c| %>
+  <%= link_to c.title, c %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <% end %>
+</h4>
+</div>
 <hr>

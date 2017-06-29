@@ -18,7 +18,6 @@ class CategoriesController < ApplicationController
     redirect_to categories_path
   end
   def show
-    @categories = Category.all
     @sub_categories = @category.sub_categories
   end
   def new

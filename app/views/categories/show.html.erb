@@ -1,13 +1,7 @@
-<div class="categories-container" style="color:#ff6c36">
-  <h4 style="color:yellow">
-  <% @categories.each do |c| %>
-  <%= link_to c.title, c %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <% end %>
-</h4>
-</div>
-<hr>
 
-<h1><%= @category.title %></h1>
+<h1><%= @category.title %>:</h1>
+---------------------------------------------
+</p>
 <div class="container">
   <% @sub_categories.each do  |sub_categories|%>
   <div class="col">
