@@ -13,14 +13,18 @@
  *= require_tree .
  *= require_self
  */
+ .picture{
+   padding-left: 220px;
+ }
 .pull-right {
   position: absolute;
   right: 10px;
   margin-left: 440px;
-
 }
- .category-container {
-  margin-left: 100px;
+ .categories-container {
+  position: relative;
+  bottom: 5px;
+  padding-left: 120px;
  }
  .products-container {
    display: inline;
