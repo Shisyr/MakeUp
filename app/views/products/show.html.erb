@@ -1,4 +1,7 @@
 
-<h2><%= @product.title %>
-</h2>
-<%= image_tag @product.image(:large) %>
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <%= render "product_row", product: @product, order_item: @order_item %>
+  </div>
+</div>

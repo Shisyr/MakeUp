@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TestStore</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>ShoppingCartExample</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <% if request.ssl? %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% else %>
+    <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+  <% end %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <%= render "partials/header" %>
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="panel panel-<%= key %>">
-          <div class="panel-heading">
-            <%= value %>
-          </div>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <%= render "partials/header" %>
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="panel panel-<%= key %>">
+        <div class="panel-heading">
+          <%= value %>
         </div>
-      <% end %>
-
-    <%= yield %>
-  </body>
+      </div>
+    <% end %>
+  </div>
+<%= yield %>
+</body>
 </html>
