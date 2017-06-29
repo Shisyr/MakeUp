@@ -3,11 +3,10 @@
 ---------------------------------------------
 </p>
 <div class="container">
+  <h3>
   <% @sub_categories.each do  |sub_categories|%>
-  <div class="col">
-        <%= link_to sub_categories.title, sub_categories %>
-  </div>
-  <div class="col">
-  </div>
+        | <%= link_to sub_categories.title, sub_categories %>
 <% end %>
+|
+</h3>
 </div>

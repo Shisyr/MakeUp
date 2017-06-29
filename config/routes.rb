@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'carts/show'
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/nikomunelzyazahodit', as: 'rails_admin'
 
   root 'static_pages#home'
   resource :cart, only: [:show]
